@@ -1,7 +1,4 @@
-package com.company;
-
-import com.company.Ejercicio1.Cilindro;
-import com.company.Ejercicio1.Circulo;
+package com.company.Ejercicio1;
 
 public class Main {
 
