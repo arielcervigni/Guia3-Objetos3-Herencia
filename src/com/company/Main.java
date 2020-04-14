@@ -25,13 +25,16 @@ public class Main {
         System.out.println(cilindroA.mostrarCilindro());
 
         /// Ejercicio B
-        Circulo cirbuloB = new Circulo(2.5, "Azul");
-        System.out.println(cirbuloB.mostrarCirculoYArea());
+        Circulo circuloB = new Circulo(2.5, "Azul");
+        double areaB = circuloB.calcularArea();
+        System.out.println(circuloB.mostrarCirculoYArea(areaB));
         Cilindro cilindroB = new Cilindro(2.5, "Azul", 1.5);
-        System.out.println(cilindroB.mostrarCilindroYVolumen());
+        areaB = cilindroB.calcularArea();
+        double volumenB = cilindroB.calcularVolumen();
+        System.out.println(cilindroB.mostrarCilindroYVolumen(areaB, volumenB));
 
         /// Ejercicio C
-        System.out.println(cilindroB.mostrarAreaCilindro());
+        System.out.println(cilindroB.mostrarAreaCilindro(areaB));
 
         System.out.println("Mostrando SUPERclase");
         System.out.println(cilindroB.mostrarSuperClase());
@@ -63,7 +66,7 @@ public class Main {
         int estudiantes = 0;
         int staffs = 0;
         int ingresos = 0;
-        Estudiante unEstudiante = new Estudiante();
+        Estudiante unEstudiante;
         double ingreso =0;
 
         for (i=0; i<8;i++)
