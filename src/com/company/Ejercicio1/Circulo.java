@@ -33,10 +33,9 @@ public class Circulo {
     {
         return PI*(getRadio()*getRadio());
     }
-    public String mostrarCirculoYArea ()
+    public String mostrarCirculoYArea (double area)
     {
-        double area = calcularArea();
-        return "El radio del círculo es de: " + getRadio() + " y es de color " + getColor() + " Area: " + area + "\n";
+        return mostrarCirculo() + "Area: " + area + "\n";<
     }
 
 }

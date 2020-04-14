@@ -2,7 +2,7 @@ package com.company.Ejercicio1;
 
 public class Cilindro extends Circulo {
 
-    private double altura;
+    protected double altura;
 
     public Cilindro (){
         super();
@@ -29,28 +29,23 @@ public class Cilindro extends Circulo {
         /*Modificar el método calcular  volumen en la clase cilindro para que llame al método
         de la ​SUPER​clase que calcula  el área. */
     }
-    public String mostrarCilindroYVolumen()
+    public String mostrarCilindroYVolumen(double area, double volumen)
     {
-        double area = super.calcularArea();
-        double volumen = calcularVolumen();
-        return "Cilindro\nRadio: " + getRadio() + " Color: " + getColor() +
-                " Altura: " + getAltura() + " Area: " + area + " Volumen: " + volumen;
+        return mostrarCilindro() +" Altura: " + getAltura() + " Area: " + area + " Volumen: " + volumen;
     }
-    public double calcularAreaCilindro ()
+    public double calcularAreaCilindro (double areaBase)
     {
-        double areaBase = calcularArea();
         return  ((2*PI)*getRadio()*altura) + (2*areaBase);
     }
-    public String mostrarAreaCilindro ()
+    public String mostrarAreaCilindro (double area)
     {
-        double area = calcularAreaCilindro();
         return "El área del cilindro es: " + area;
     }
 
     @Override
     public double calcularArea ()
     {
-       return ((2*PI*getRadio()*getAltura())+(2*PI*(getRadio()*getRadio())));
+        return ((2*PI*getRadio()*getAltura())+(2*PI*(getRadio()*getRadio())));
     }
 
     public String mostrarSuperClase ()
